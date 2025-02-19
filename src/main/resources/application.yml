@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: bibliotheque-api
+    version: 1.0.0
+  datasource:
+    url: jdbc:postgresql://bibliotheque-db:5432/postgres
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect

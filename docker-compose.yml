@@ -1,0 +1,19 @@
+services:
+  bibliotheque-db:
+    image: postgres
+    container_name: bibliotheque-db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+  bibliotheque-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: bibliotheque-api
+    links:
+      - "bibliotheque-db:bibliotheque-db"
+    ports:
+      - "8080:8080"
