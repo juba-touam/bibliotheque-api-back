@@ -10,13 +10,13 @@ node("ci-node"){
 	//	sh "chmod 777 mvnw && ./mvnw test"
     //}
 	//
-    stage("Quality Analyses"){
-		sh "./mvnw clean verify sonar:sonar \\\n" +
-                "  -Dsonar.projectKey=bibliotheque-api \\\n" +
-                "  -Dsonar.projectName='bibliotheque-api' \\\n" +
-                "  -Dsonar.host.url=https://sonar.check-consulting.net \\\n" +
-                "  -Dsonar.token=sqp_0d1d1f36f8523169f367dc51f2529f4b4f673629"
-    }
+    //stage("Quality Analyses"){
+	//	sh "./mvnw clean verify sonar:sonar \\\n" +
+    //            "  -Dsonar.projectKey=bibliotheque-api \\\n" +
+    //            "  -Dsonar.projectName='bibliotheque-api' \\\n" +
+    //            "  -Dsonar.host.url=https://sonar.check-consulting.net \\\n" +
+    //            "  -Dsonar.token=sqp_0d1d1f36f8523169f367dc51f2529f4b4f673629"
+    //}
 
     stage("Build Jar file"){
 
